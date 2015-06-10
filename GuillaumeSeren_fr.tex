@@ -1,9 +1,22 @@
+% --------------------------------------------------
+% @author Guillaume Seren
+% source  https://github.com/GuillaumeSeren/CurriculumVitae
+% file    GuillaumeSeren_fr.tex
+% Licence GPLv3
+%
+% Latex main file.
+% --------------------------------------------------
 %!TEX TS-program = xelatex
-\documentclass[]{GuillaumeSeren-cv}
+
+\documentclass[print]{GuillaumeSeren-cv}
+
+\usepackage{afterpage} % to change the geometry of pages
+\usepackage{array}     % To add extra row height to tabular
+\usepackage{graphicx}  % to include images
+\usepackage{enumitem}  % control left margin of itemize environment
 
 \begin{document}
-\header{Guillaume}{Seren}
-      {Ingénieur d'Études Freelance}
+\header{Guillaume}{Seren}{Ingénieur d'Études Freelance}
 
 \begin{aside}
   \section{Address}
@@ -95,7 +108,7 @@ Analyse de code, refactoring et optimisations.
 Test d'intrusions, mise en place de script d'attaque / bench.}
 \end{entrylist}
 
-
+\newpage
 \section{Expériences}
 \begin{entrylist}
   \entry

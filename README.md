@@ -15,6 +15,7 @@ Before starting this project, I had searched around for good ideas,
 to give back a thank you I made a link below:
 
 * https://github.com/raphink/CV : Idea of the makefile.
+* https://github.com/jnsebgosselin/Curriculum-Vitae : Some style ideas.
 
 ## Licence
 The project is GPLv3.
