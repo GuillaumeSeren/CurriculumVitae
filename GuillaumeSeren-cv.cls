@@ -56,23 +56,22 @@
 \newfontfamily\bodyfont
 [BoldFont=texgyreheros-bold.otf,
 ItalicFont=texgyreheros-italic.otf,
-BoldItalicFont=texgyreheros-bolditalic.otf]
-{texgyreheros-regular.otf}
-\newfontfamily\thinfont[]{Lato-Light.ttf}
+BoldItalicFont=texgyreheros-bolditalic.otf,
+Path = fonts/]{texgyreheros-regular.otf}
+\newfontfamily\thinfont[Path = fonts/]{Lato-Light.ttf}
 % or for thiner version
 %\newfontfamily\thinfont[]{Lato-Hairline.ttf}
-\newfontfamily\headingfont[]{texgyreheros-bold.otf}
+\newfontfamily\headingfont[Path = fonts/]{texgyreheros-bold.otf}
 
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont
 [Mapping=tex-text, Color=textcolor,
 BoldFont=texgyreheros-bold.otf,
 ItalicFont=texgyreheros-italic.otf,
-BoldItalicFont=texgyreheros-bolditalic.otf
-]
-{texgyreheros-regular.otf}
+BoldItalicFont=texgyreheros-bolditalic.otf,
+Path = fonts/]{texgyreheros-regular.otf}
 
-\setmathfont{texgyreheros-regular.otf}
+\setmathfont[Path = fonts/]{texgyreheros-regular.otf}
 
 % Header
 \RequirePackage{tikz}
