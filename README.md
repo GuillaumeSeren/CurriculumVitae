@@ -16,6 +16,7 @@ to give back a thank you I made a link below:
 
 * https://github.com/raphink/CV : Idea of the makefile.
 * https://github.com/jnsebgosselin/Curriculum-Vitae : Some style ideas.
+* http://open-freax.fr/tuto-moderncv-latex-cv/ : Nice article on moderncv.
 
 ## Licence
 The project is GPLv3.
