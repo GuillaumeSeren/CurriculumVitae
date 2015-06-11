@@ -14,7 +14,10 @@
 \ProcessOptions\relax
 \LoadClass{article}
 
-% Colors
+%===============================================
+% COLORS 
+%===============================================
+
 \RequirePackage{xcolor}
 
 \definecolor{white}{HTML}{FFFFFF}
@@ -45,32 +48,86 @@
 \colorlet{textcolor}{gray}
 \colorlet{headercolor}{gray}
 
-% Fonts
-%%% modified by Karol Kozioł for ShareLaTex use
-\RequirePackage[quiet]{fontspec}
-\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
+%===============================================
+% FONTS 
+%===============================================
 
-\newfontfamily\bodyfont
-[BoldFont=texgyreheros-bold.otf,
-ItalicFont=texgyreheros-italic.otf,
-BoldItalicFont=texgyreheros-bolditalic.otf,
-Path = fonts/]{texgyreheros-regular.otf}
-\newfontfamily\thinfont[Path = fonts/]{Lato-Light.ttf}
-% or for thiner version
-%\newfontfamily\thinfont[]{Lato-Hairline.ttf}
-\newfontfamily\headingfont[Path = fonts/]{texgyreheros-bold.otf}
+%-----------------------------------------------
+% ROBOTO
+%-----------------------------------------------
+
+%http://graphicdesign.stackexchange.com/questions/15462/
+
+\RequirePackage[quiet]{fontspec}
+
+\newfontfamily\bodyfont[Path = fonts/]{Roboto-Regular}
+\newfontfamily\thinfont[Path = fonts/]{Roboto-Thin}
+\newfontfamily\headingfont[Path = fonts/]{RobotoCondensed-Bold}
 
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont
-[Mapping=tex-text, Color=textcolor,
-BoldFont=texgyreheros-bold.otf,
-ItalicFont=texgyreheros-italic.otf,
-BoldItalicFont=texgyreheros-bolditalic.otf,
-Path = fonts/]{texgyreheros-regular.otf}
+\setmainfont[Mapping=tex-text, Color=textcolor, Path = fonts/]{Roboto-Light}
 
-\setmathfont[Path = fonts/]{texgyreheros-regular.otf}
+%-----------------------------------------------
+% HELVETICA
+%-----------------------------------------------
 
-% Header
+%\newfontfamily\bodyfont[]{HelveticaNeueLTStd-Lt}
+%\newfontfamily\thinfont[]{HelveticaNeueLTStd-UltLt}
+%\newfontfamily\headingfont[]{HelveticaNeueLTStd-BdCn}
+%
+%\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[Mapping=tex-text, Color=textcolor]{HelveticaNeueLTStd-Lt}
+
+%-----------------------------------------------
+% MATH
+%-----------------------------------------------
+
+%\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
+%\setmathfont{XITS Math}
+
+%-----------------------------------------------
+% FONT AWESOME
+%-----------------------------------------------
+
+% http://tex.stackexchange.com/questions/121891/
+% https://gist.github.com/sway/3101743
+% https://coderwall.com/p/r67dyq/using-font-awesome-with-xe-latex
+%http://tex.stackexchange.com/questions/134121/fontawesome-icons-are-getting-too-big-using-xelatex/134244#134244
+
+\newfontfamily{\FA}[Path = fonts/]{fontawesome-webfont}
+
+\def\github{\color{gray}{\FA\symbol{"F092}}}
+\def\facebook{\color{gray}{\FA\symbol{"F082}}}
+\def\linkedin{\color{gray}{\FA\symbol{"F08C}}}
+\def\phoneb{\color{gray}{\FA\symbol{"F098}}}
+\def\home{\color{gray}{\FA\symbol{"F015}}}
+\def\mail{\color{gray}{\FA\symbol{"F0E0}}}
+\def\globe{\color{gray}{\FA\symbol{"F0AC}}}
+
+\def\circleFull{\small\color{gray}{\FA\symbol{"F111}}\hspace{0.15cm}}
+\def\circleEmpty{\small\color{gray}{\FA\symbol{"F10C}}\hspace{0.15cm}}
+
+\newcommand{\skillScale}[1]
+{
+\ifnum#1=1
+    \circleFull\circleEmpty\circleEmpty\circleEmpty\circleEmpty
+\else\ifnum#1=2
+    \circleFull\circleFull\circleEmpty\circleEmpty\circleEmpty
+\else\ifnum#1=3
+    \circleFull\circleFull\circleFull\circleEmpty\circleEmpty
+\else\ifnum#1=4
+    \circleFull\circleFull\circleFull\circleFull\circleEmpty
+\else\ifnum#1=5
+    \circleFull\circleFull\circleFull\circleFull\circleFull
+\else 
+    \circleEmpty\circleEmpty\circleEmpty\circleEmpty\circleEmpty
+\fi\fi\fi\fi\fi
+}
+
+%===============================================
+% HEADER 
+%===============================================
+
 \RequirePackage{tikz}
 
 \newcommand{\rolefont}{\fontsize{14pt}{24pt} %
@@ -92,7 +149,10 @@ Path = fonts/]{texgyreheros-regular.otf}
   \vspace{-2\parskip}
 }
 
-% Structure
+%===============================================
+% STRUCTURE 
+%===============================================
+
 \RequirePackage{parskip}
 
 \newcounter{colorCounter}
@@ -129,8 +189,19 @@ Path = fonts/]{texgyreheros-regular.otf}
 
 \pagestyle{empty}
 
-% List environment
+%===============================================
+% LIST ENVIRONMENT 
+%===============================================
+
+%\usepackage{tabularx}
+%\usepackage{array}
+%\usepackage{ltablex}
 \setlength{\tabcolsep}{0pt}
+%\usepackage{environ}
+%\NewEnviron{entrylist}
+%  {\begin{tabularx}{\textwidth}{@{\extracolsep{\fill}}ll}}
+%    \BODY
+%  {\end{tabularx}}
 \newenvironment{entrylist}
   {\begin{tabular*}{\textwidth}{@{}p{2cm}l}
   }
@@ -175,7 +246,10 @@ Path = fonts/]{texgyreheros-regular.otf}
         \footnotesize\addfontfeature{Color=gray}#5\vspace{\parsep}%
         }\vspace{5pt}\\}
 
-% Side block
+%===============================================
+% SIDE BLOCK 
+%===============================================
+
 \RequirePackage[absolute,overlay]{textpos}
 \setlength{\TPHorizModule}{1cm}
 \setlength{\TPVertModule}{1cm}
@@ -210,17 +284,20 @@ Path = fonts/]{texgyreheros-regular.otf}
   \let\section\oldsection
 }
 
-% Other tweaks
+%===============================================
+% OTHER TWEAKS 
+%===============================================
+
 \RequirePackage[left=1.25cm,top=2cm,right=6.5cm,bottom=1.25cm,nohead,nofoot]{geometry}
 \definecolor{lblue}{HTML}{0000EE}
 \RequirePackage[hidelinks]{hyperref}
 \hypersetup{
-    colorlinks=true,
-    linkcolor=lblue,
-    citecolor=lblue,
-    filecolor=lblue,
+    colorlinks=true,       
+    linkcolor=lblue,          
+    citecolor=lblue,        
+    filecolor=lblue,      
     urlcolor = lblue}
-
+    
 % A fix for \href{}{} colors not working with fontspec
 \makeatletter
 \def\HyColor@@@@UseColor#1\@nil{\addfontfeatures{Color=#1}}

@@ -16,7 +16,7 @@
 \usepackage{enumitem}  % control left margin of itemize environment
 
 \begin{document}
-\header{Guillaume}{Seren}{Ingénieur d'Études Freelance}
+\header{Guillaume} {Seren}{Ingénieur d'Études Freelance}
 
 \begin{aside}
   \section{Address}
@@ -58,178 +58,251 @@
 
 \section{Compétences}
 \begin{entrylist}
-  \entry
-  {Développement :}
+  \entryBul
+  {Développement}
   {}
   {}
-  {Coté - serveur : Php, Bash, JavaScript, Java / Jsp, Python, C\# / Asp.
-Coté - client : JavaScript, Bash, Python, Java / J2EE, C\# / .Net.
-Présentation : xml, html, xhtml.
-Mise en page : CSSx / CSS3.}
+  {}
+  {
+     \begin{itemize}[leftmargin=*]
+       \setlength\itemsep{0pt}
+       \item Coté - serveur : Php, Bash, JavaScript, Java / Jsp, Python.
+       \item Coté - client : JavaScript, Bash, Python, Java / J2EE, Ruby.
+       \item Présentation : xml, html, xhtml.
+       \item Mise en page : CSSx / CSS3.
+     \end{itemize}
+     }
 
-  \entry
-  {Systèmes :}
+  \entryBul
+  {Systèmes d'exploitation}
   {}
   {}
-  {Serveurs : Debian, Gentoo, BSD, Slackware, NixOs.
-  Clients : Debian. Android, Osx, Windows, FirefoxOs, TizenOs.}
+  {}
+  {
+     \begin{itemize}[leftmargin=*]
+       \setlength\itemsep{0pt}
+       \item Serveurs : Debian, BSD.
+       \item Clients : Debian. Osx.
+       \item Mobile : Android.
+     \end{itemize}
+     }
 
-  \entry
-  {Administration système :}
+  \entryBul
+  {Administration système}
   {}
   {}
-  {Mise en place d'une architecture de production, avec redondance de serveurs.
-Mise en place d'une plateforme de développement collaboratif avec versionning, en utilisant des méthodes agiles / Extreme programming.
-Rétroportage de logiciels et correctifs, en utilisant plusieurs branches de maturation.
-Mise en place et évolution de serveur WEB de dev / test / préprod, et de production, de type LAMP (Linux Apache Mysql Php).}
+  {}
+  {
+     \begin{itemize}[leftmargin=*]
+       \setlength\itemsep{0pt}
+       \item Mise en place d'une architecture de production, avec redondance de serveurs.
+       \item Mise en place d'une plateforme de développement collaboratif avec versionning, en utilisant des méthodes agiles / Extreme programming.
+       \item Rétroportage de logiciels et correctifs, en utilisant plusieurs branches de maturation.
+       \item Mise en place et évolution de serveur WEB de dev / test / préprod, et de production, de type LAMP (Linux Apache Mysql Php).
+     \end{itemize}
+  }
 
-  \entry
-  {Modélisation :}
+  \entryBul
+  {Méthodes}
   {}
   {}
-  {Diagrammes UML.
-Modélisation de donnée MERISE, MCD / MPD.
-Suivi de cas d'utilisation et optimisation des fonctionnalité existantes (API).}
+  {}
+  {
+     \begin{itemize}[leftmargin=*]
+       \setlength\itemsep{0pt}
+       \item Diagrammes UML.
+       \item Modélisation de donnée MERISE, MCD / MPD.
+       \item Suivi de cas d'utilisation et optimisation des fonctionnalité existantes (API).
+       \item Utilisation de méthodes agiles.
+     \end{itemize}
+     }
 
-  \entry
-  {Réseaux :}
+  \entryBul
+  {Réseaux}
   {}
   {}
-  {Gestion de postes client au moyen d'un serveur LDAP / active directory.
-Gestion de parc physique et virtuel de machine, screen et scripting de gestion (bash/python).
-Réalisation de ghost systèmes, et VM de machine de bench / test.}
+  {}
+  {
+     \begin{itemize}[leftmargin=*]
+       \setlength\itemsep{0pt}
+       \item Gestion de postes client au moyen d'un serveur LDAP / active directory.
+       \item Gestion de parc physique et virtuel de machine, screen et scripting de gestion (bash/python).
+       \item Réalisation de ghost systèmes, et VM de machine de bench / test.
+     \end{itemize}
+     }
 
-  \entry
-  {Sécurité informatique :}
+  \entryBul
+  {Sécurité informatique}
   {}
   {}
-  {Audit de serveurs, nmap / metasploit.
-Analyse de code, refactoring et optimisations.
-Test d'intrusions, mise en place de script d'attaque / bench.}
+  {}
+  {
+     \begin{itemize}[leftmargin=*]
+       \setlength\itemsep{0pt}
+       \item Audit de serveurs, nmap / metasploit.
+       \item Analyse de code, refactoring et optimisations.
+       \item Test d'intrusions, mise en place de script d'attaque / bench.
+     \end{itemize}
+     }
 \end{entrylist}
 
 \newpage
+
 \section{Expériences}
 \begin{entrylist}
-  \entry
+  \entryBul
+  {2013 - 2015}
   {Starpass / BdMultimédia}
-  {Paris (Mar 2013 – 2015)}
+  {Paris}
   {Poste : Ingénieur d'études.}
-  {Mission :
-- Mise en place de Méthodes Agile, avec « SCRUM ».
-- Développement d'un SCM → GIT, pour gestion de l'application Starpass, sous la forme de 3 branches de codes de bases, sur lesquelles s'appuient les évolutions / modifications, validations, production.
-- Réalisation de script de snapshot, pour faciliter le suivi et la transition, vers le SCM.
-- Script de création et mise en place d'utilisateurs « Unix », permettant aux différents utilisateurs l'accès à leur espace personnalisé, avec plateforme de test, et accès aux divers scripts.
-- Script de déploiement, local, et distant, avec un support d'appel de scripts de test, pré/post opératoires.
-- Script de test fonctionnel, retourne les status « HTTP », des ressources et leur temps de réponse, afin de permettre benchmarking du temps et analyse fonctionnel de l'application.
-- Script d'audit de code PHP, et JS, analyse du code inutile, problèmes d'encodages, path, include, indentation, etc.
-- Formation aux Méthodes Agiles, de l'équipe en place et rédaction de documentations.
-- Mise en place de cygwin, sur les machines non-unix, afin de pouvoir utiliser directement les scripts réalisés.
-- Réalisation d'une étude, avec specifications techniques pour le développement de modules de com et jeu supplémentaires (UML classes, séquences, MCD).
-- Création d'un MCD pour la DB existante.
-- Refactoring / versionning de la DB (structure) ainsi que des patch d'évolutions.
-- Ajout d'un système de gestion des évolution (patch) pour faciliter le suivi des différentes versions du projet.
-Environnement Tech :
-- OS : Debian 6 / 7.
-- Bases de données : Mysql 5.5.
-- EDI : Vim, Netbeans, Mysql Workbench.
-- Technologies : PHP, JS, SQL, Py, Git, Bash, git.}
+  {
+     \begin{itemize}[leftmargin=*]
+       \setlength\itemsep{0pt}
+        \item Mise en place de Méthodes Agile, avec « SCRUM ».
+        \item Développement d'un SCM → GIT, pour gestion de l'application Starpass, sous la forme de 3 branches de codes de bases, sur lesquelles s'appuient les évolutions / modifications, validations, production.
+        \item Réalisation de script de snapshot, pour faciliter le suivi et la transition, vers le SCM.
+        \item Script de création et mise en place d'utilisateurs « Unix », permettant aux différents utilisateurs l'accès à leur espace personnalisé, avec plateforme de test, et accès aux divers scripts.
+        \item Script de déploiement, local, et distant, avec un support d'appel de scripts de test, pré/post opératoires.
+        \item Script de test fonctionnel, retourne les status « HTTP », des ressources et leur temps de réponse, afin de permettre benchmarking du temps et analyse fonctionnel de l'application.
+        \item Script d'audit de code PHP, et JS, analyse du code inutile, problèmes d'encodages, path, include, indentation, etc.
+        \item Formation aux Méthodes Agiles, de l'équipe en place et rédaction de documentations.
+        \item Mise en place de cygwin, sur les machines non-unix, afin de pouvoir utiliser directement les scripts réalisés.
+        \item Réalisation d'une étude, avec specifications techniques pour le développement de modules de com et jeu supplémentaires (UML classes, séquences, MCD).
+        \item Création d'un MCD pour la DB existante.
+        \item Refactoring / versionning de la DB (structure) ainsi que des patch d'évolutions.
+        \item Ajout d'un système de gestion des évolution (patch) pour faciliter le suivi des différentes versions du projet.
+        \item Environnement Tech :
+        \item OS : Debian 6 / 7.
+        \item Bases de données : Mysql 5.5.
+        \item EDI : Vim, Netbeans, Mysql Workbench.
+        \item Technologies : PHP, JS, SQL, Py, Git, Bash, git.
+     \end{itemize}
+  }
 
-  \entry
-  {Renault Retail Group}
-  {Paris (jan 2012 – jan 2013)}
+  \entryBul
+  {2012 - 2013}
+  {Renault Retail Group / Purjus}
+  {Paris}
   {Poste : Ingénieur d'études.}
-  {Mission :
-- Création d'une plateforme centralisé « http://renault-retail-group.fr ».
-- Développement de 7 espaces dédiés régionaux, comme « http://paris.renault-retail-group.fr/ ».
-- Modélisation et mise en place d'une base de donnée centralisé, en suivant la méthode MERISE.
-- Mise en place d'une plateforme de développement collaboratif basé sur, svn et trac, pour permettre le suivi et traitement des demandes et modifications.
-- Développement de diagrammes uml, et implémentation dans le projet.
-- Mise en place d'une plateforme de pré-production.
-- Gestion d'un dépôt svn, avec plusieurs branches principales : Production / Pré-production / Développement.
-- Chaque correctifs, et/ou fonctionnalités sont entreposés dans leur propres branches.
-- Développement des fonctionnalités en suivant le framework Joomla.
-- Réalisations de vues mysql.
-Environnement Tech :
-- OS : Debian, freeBSD.
-- Bases de données : Mysql 5.5.
-- Framework : Joomla.
-- EDI : Eclipse, Netbeans, vim, mysql workbench.
-- Librairies : sh404SEF, JCE.
-- Technologies : PHP, JS, SQL, Py, SVN.}
+  {
+     \begin{itemize}[leftmargin=*]
+       \setlength\itemsep{0pt}
+       \item Création d'une plateforme centralisé « http://renault-retail-group.fr ».
+       \item Développement de 7 espaces dédiés régionaux, comme « http://paris.renault-retail-group.fr/ ».
+       \item Modélisation et mise en place d'une base de donnée centralisé, en suivant la méthode MERISE.
+       \item Mise en place d'une plateforme de développement collaboratif basé sur, svn et trac, pour permettre le suivi et traitement des demandes et modifications.
+       \item Développement de diagrammes uml, et implémentation dans le projet.
+       \item Mise en place d'une plateforme de pré-production.
+       \item Gestion d'un dépôt svn, avec plusieurs branches principales : Production / Pré-production / Développement.
+       \item Chaque correctifs, et/ou fonctionnalités sont entreposés dans leur propres branches.
+       \item Développement des fonctionnalités en suivant le framework Joomla.
+       \item Réalisations de vues mysql.
+       \item Environnement Tech :
+       \item OS : Debian, freeBSD.
+       \item Bases de données : Mysql 5.5.
+       \item Framework : Joomla.
+       \item EDI : Eclipse, Netbeans, vim, mysql workbench.
+       \item Librairies : sh404SEF, JCE.
+       \item Technologies : PHP, JS, SQL, Py, SVN.
+     \end{itemize}
+  }
 
-  \entry
-  {Renault Paris}
-  {Paris (mai 2010 – jan 2012)}
+\end{entrylist}
+\newpage
+\begin{entrylist}
+
+  \entryBul
+  {2010 - 2012}
+  {Renault Paris / Purjus}
+  {Paris}
   {Poste : Développeur.}
-  {Mission :
-- Développements sur le site internet, « http://renaultparis.fr ».
-- Développement du module CRUD de gestion des leads et demande client depuis le back-end.
-- Outil de demande d'informations, et de prise de contacts clients depuis le front-end.
-- Affichage du stock disponible, et gestion du processus de lead sur un produit.
-- Mise en place d'une plateforme de versionning, SVN.
-Environnement Tech :
-- OS : Debian, freeBSD.
-- Bases de données : Mysql 5.5.
-- Framework : Joomla.
-- EDI : Eclipse, Netbeans, vim.
-- Librairies : sh404SEF, JCE.
-- Technologies : PHP, JS, SQL, Py, SVN.}
+  {
+      \begin{itemize}[leftmargin=*]
+          \setlength\itemsep{0pt}
+          \item Développements sur le site internet, « http://renaultparis.fr ».
+          \item Développement du module CRUD de gestion des leads et demande client depuis le back-end.
+          \item Outil de demande d'informations, et de prise de contacts clients depuis le front-end.
+          \item Affichage du stock disponible, et gestion du processus de lead sur un produit.
+          \item Mise en place d'une plateforme de versionning, SVN.
+          \item Environnement Tech :
+          \item OS : Debian, freeBSD.
+          \item Bases de données : Mysql 5.5.
+          \item Framework : Joomla.
+          \item EDI : Eclipse, Netbeans, vim.
+          \item Librairies : sh404SEF, JCE.
+          \item Technologies : PHP, JS, SQL, Py, SVN.
+      \end{itemize}
+  }
 
-  \entry
-  {KP1 – GFI}
-  {Avignon (aout 2008 – jan 2010)}
+  \entryBul
+  {2008 - 2010}
+  {KP1 / GFI}
+  {Avignon}
   {Poste : Ingénieur d'études}
-  {Mission :
-- Réalisation d'un moteur de calcul basé sur des formules.
-- Stockage d'une partie des paramètres dans une base de donnée.
-- Mise un place d'un cache objet Jcs.
-- Réalisation d'une batterie de test unitaire basé sur jUnit.
-Environnement Tech :
-- OS : Windows Xp, Windows 2003 Serveur, VMWare.
-- Bases de données : SQL Serveur 2005
-- Framework : JDK 1.5,  Struts 1.x.
-- EDI : Eclipse 3.4.1 Ganymede, NetBeans 6.1
-- Librairies : Tiles, Validator, Jep, Jcs, jUnit.
-- Technologies : JAVA, Java Script, CSS, JSP, CVS.}
+  {
+      \begin{itemize}[leftmargin=*]
+          \setlength\itemsep{0pt}
+          \item Réalisation d'un moteur de calcul basé sur des formules.
+          \item Stockage d'une partie des paramètres dans une base de donnée.
+          \item Mise un place d'un cache objet Jcs.
+          \item Réalisation d'une batterie de test unitaire basé sur jUnit.
+          \item Environnement Tech :
+          \item OS : Windows Xp, Windows 2003 Serveur, VMWare.
+          \item Bases de données : SQL Serveur 2005
+          \item Framework : JDK 1.5,  Struts 1.x.
+          \item EDI : Eclipse 3.4.1 Ganymede, NetBeans 6.1
+          \item Librairies : Tiles, Validator, Jep, Jcs, jUnit.
+          \item Technologies : JAVA, Java Script, CSS, JSP, CVS.
+      \end{itemize}
+  }
 
-  \entry
-  {Mairie de Marseille}
-  {Marseille (Jan 2008 – mars 2008)}
+  \entryBul
+  {2008 - 2008}
+  {Mairie de Marseille / Computacenter}
+  {Marseille}
   {Poste : Administrateur systèmes}
-  {Mission :
-- Administration de serveurs pré-production et production.
-- Mise en place de test de redémarrage des services.
-- Mise en place de test de montée en charge.
-- Sauvegarde des données sensibles.
-- Travail en environnement hétérogène.
-Environnement Tech :
-- OS : WinXp, Win2003, Debian, RedHat Entreprise, Ubuntu.
-- Bases de données : Oracle 9.x, MySQL 4.x, Sql Serveur 2005.
-- EDI : NotePad++, vi.
-- Technologies : SSH, Bash linux et windows.}
+  {
+      \begin{itemize}[leftmargin=*]
+          \setlength\itemsep{0pt}
+          \item Administration de serveurs pré-production et production.
+          \item Mise en place de test de redémarrage des services.
+          \item Mise en place de test de montée en charge.
+          \item Sauvegarde des données sensibles.
+          \item Travail en environnement hétérogène.
+          \item Environnement Tech :
+          \item OS : WinXp, Win2003, Debian, RedHat Entreprise, Ubuntu.
+          \item Bases de données : Oracle 9.x, MySQL 4.x, Sql Serveur 2005.
+          \item EDI : NotePad++, vi.
+          \item Technologies : SSH, Bash linux et windows.
+      \end{itemize}
+  }
 
-  \entry
-  {Liligo - FINDWORKS TECHNOLOGIES}
-  {Paris (2005 - 2007)}
+  \entryBul
+  {2005 - 2007}
+  {Liligo / FINDWORKS TECHNOLOGIES}
+  {Paris}
   {Poste : Développeur}
-  {Mission :
-- Travail sur le projet : « http://www.liligo.com/ »
-- Gestion de bases de données.
-- Développement de script de parsing coté serveur en JS.
-- Développement de script de parsing de site web, en PERL.
-- Développement d'IHM de l'application Web.
-- Développement du modèle XHTML suivant une charte graphique.
-- Développement de l’habillage du style de l'application en CSS.
-- Analyse et gestion du Search Engine Optimisation, SEO.
-- Contrôle qualité et test de montée en charge.
-Environnement Tech :
-- OS : Debian, WinXP.
-- Bases de données : MySQL 4,x
-- Framework : JDK 1,4.
-- EDI : Eclipse 3,2 Web Tools Platform.
-- librairies : hibernate.
-- Technologies : SSH, JAVA, JSP, Java Script, CSS, xHTML, PERL.}
+  {
+      \begin{itemize}[leftmargin=*]
+          \setlength\itemsep{0pt}
+          \item Travail sur le projet : « http://www.liligo.com/ »
+          \item Gestion de bases de données.
+          \item Développement de script de parsing coté serveur en JS.
+          \item Développement de script de parsing de site web, en PERL.
+          \item Développement d'IHM de l'application Web.
+          \item Développement du modèle XHTML suivant une charte graphique.
+          \item Développement de l’habillage du style de l'application en CSS.
+          \item Analyse et gestion du Search Engine Optimisation, SEO.
+          \item Contrôle qualité et test de montée en charge.
+          \item Environnement Tech :
+          \item OS : Debian, WinXP.
+          \item Bases de données : MySQL 4,x
+          \item Framework : JDK 1,4.
+          \item EDI : Eclipse 3,2 Web Tools Platform.
+          \item librairies : hibernate.
+          \item Technologies : SSH, JAVA, JSP, Java Script, CSS, xHTML, PERL.
+      \end{itemize}
+  }
 \end{entrylist}
 
 \begin{flushleft}
