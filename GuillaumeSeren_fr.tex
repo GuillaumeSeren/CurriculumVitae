@@ -10,11 +10,13 @@
 
 \documentclass[10pt,a4paper,sans]{moderncv}
 
+\usepackage{GuillaumeSeren}
+\linespread{0.9}
 \moderncvstyle{classic} % thème visuel au choix : empty, classic, casual, banking
 \moderncvcolor{orange}  %couleur du thème au choix : blue, orange, green, red, purple, grey, black
 \setlength{\hintscolumnwidth}{3cm} % pour changer la largeur de la colonne de gauche du CV (celle des dates, tout ça)
 \usepackage[utf8]{inputenc} % l'encodage que vous utilisez, à adapter à votre cas
-\usepackage[scale=1]{geometry} % l'échelle du document, pour tout faire tenir sur une feuille !
+% \usepackage[scale=1]{geometry} % l'échelle du document, pour tout faire tenir sur une feuille !
 % (vous pouvez aussi utiliser les marges classiques, top, tout ça)
 % si vous avez des packages à inclure, url par exemple, c'est ici que ça va se
 % faire
@@ -34,19 +36,45 @@
 \homepage{guillaumeseren.com}
 % \quote{Étudiant sérieux et motivé en recherche d'un co-équipier pour dominer les tuyaux.}
 
+
+% \usepackage[french]{babel}
+
+% \linespread{0.9}
+
+% \title{Technologiste Open-Source}
+% \extrainfo{%
+% \linkedin~\httplink{www.linkedin.com/in/raphink/fr}\\%
+% \octocat~\httplink{www.github.com/raphink}\\%
+% Permis B%
+% }
+% \myquote{Vous avez re\c{c}u gratuitement, donnez gratuitement}{Matthieu 10.8}
+
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+% \begin{document}
+% \setmainfont{Minion Pro}
+% \setsansfont{Myriad Pro}
+
+\hyphenpenalty=10000
+% \maketitle
+
+\renewcommand{\labelitemi}{-- }
 \begin{document}
 % \header{Guillaume} {Seren}{Ingénieur d'Études Freelance}
 
 \makecvtitle
 
 \section{Formation}
-\cventry{2008 -- 2009}{Formation POO}{CESI}{Aix-en-Provence}
+\tlcventry{2008}{2009}{Formation POO}{CESI}{Aix-en-Provence}
 {Formation J2EE \& DotNet.}{}
-\cventry{2005 -- 2007}{BTS Informatique de gestion}{Ecole Charlotte Grawitz}
-{Marseille}{Option Développeur d'applications}{}
-\cventry{2002 -- 2004}{Deug de psychologie}{Faculté de lettres}{Aix-en-Provence}
+\tlcventry{2005}{2007}{BTS Informatique de gestion}{Ecole Charlotte Grawitz}
+{Marseille}{Option Développeur d'applications}{}
+\tlcventry{2002}{2004}{Deug de psychologie}{Faculté de lettres}{Aix-en-Provence}
 {}{}
-\cventry{2002}{Baccalauréat STI}{Lycée Antonin Artaud}{Marseille}
+\tlcventry{2001}{2002}{Baccalauréat STI}{Lycée Antonin Artaud}{Marseille}
 {Option Électronique}{}
 
 \section{Compétences}
