@@ -1,0 +1,116 @@
+\ProvidesPackage{GuillaumeSeren}
+\RequirePackage{metalogo}
+
+% moderncv themes
+% optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[green]{classic}
+
+% character encoding
+\usepackage[utf8]{inputenc}
+
+\linespread{0.9}
+\setlength{\hintscolumnwidth}{3cm}
+
+\hyphenpenalty=10000
+
+\renewcommand{\labelitemi}{-- }
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+
+\usepackage{ifxetex,ifluatex}
+\newif\ifxetexorluatex
+\ifxetex
+  \xetexorluatextrue
+\else
+  \ifluatex
+    \xetexorluatextrue
+  \else
+    \xetexorluatexfalse
+  \fi
+\fi
+
+\ifxetexorluatex
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+% \newfontfamily{\githubfont}{Octicons}
+% \newfontfamily{\linkedinfont}{Myriad Pro}
+\else
+\newcommand\githubfont{}
+\newcommand\linkedinfont{}
+\fi
+
+\usepackage{microtype}
+
+\newcommand\octocat{{\githubfont\char"F209}}
+\newcommand\linkedin{%
+\scalebox{0.7}{%
+\begin{tikzpicture}[baseline]%
+\node[fill=color2,rounded corners=2pt,anchor=base] {%
+\linkedinfont\bfseries\upshape\color{white}{in}%
+};%
+\end{tikzpicture}}}
+
+% personal data
+\firstname{Guillaume}
+\familyname{Seren}
+\title{Ingénieur d'Études Freelance}
+\address{36, Avenue Victor Cresson}{92130, Issy les Moulineaux}
+\email{guillaumeseren@gmail.com}
+\extrainfo{Permis B \& Véhicule}
+\homepage{guillaumeseren.com}
+\quote{« As long as I'm learning something, I figure I'm OK - it's a decent day. » Hunter S. Thompson}
+
+% \firstname{Rapha\"el}
+% \familyname{Pinson}
+% \address{15, rue du Chaney}{73000~Jacob-Bellecombette}
+% \mobile{+33 (0) 673 524 413}
+% \phone{+33 (0) 983 065 885}
+% %\fax{fax (optional)}                          % optional, remove the line if not wanted
+% \email{rpinson@gmail.com}
+% %\homepage{www.raphink.info}
+% %\extrainfo{\octocat~\url{http://github.com/raphink}}
+% \photo[64pt]{identity}
+
+
+\AtBeginDocument{\renewcommand{\labelitemi}{-- }}
+
+\usepackage[firstyear=2002,lastyear=2015]{moderntimeline}
+%\tlmaxdates{1999}{2012}
+\tlwidth{0.8ex}
+
+
+% Proper alignment
+\usepackage[originalcommands]{ragged2e}
+\renewcommand*{\cvcomputer}[4]{%
+  \cvdoubleitem{#1}{\small\raggedright#2}{#3}{\small\raggedright#4}}
+
+% Not all fonts have an sl shape
+\renewcommand*{\cventry}[6]{%
+  \cvline{#1}{%
+    {\bfseries#2}%
+    \ifx#3\else{, {\itshape#3}}\fi%
+    \ifx#4\else{, #4}\fi%
+    \ifx#5\else{, #5}\fi%
+    .%
+    \ifx#6\else{\newline{}\begin{minipage}[t]{\linewidth}\small#6\end{minipage}}\fi
+    }}%
+
+
+% Refine quote 
+\newcommand*{\myquote}[2]{%
+   \quote{\itshape #1 \\ \scshape \footnotesize #2}}
+
+% Hobbies
+\newcommand*{\cvhobby}[2]{\cvline{#1}{\small #2}}
+
+
+% Developer/Contributor footnotes
+\usepackage[bottom,norule,symbol*]{footmisc}
+\newcommand*{\devnotes}[2]{%
+\vfill
+\footnotetext[1]{#1}
+\footnotetext[2]{#2}
+}
+
+\newcommand*{\developer}{\footnotemark[1]}
+\newcommand*{\contributor}{\footnotemark[2]}
