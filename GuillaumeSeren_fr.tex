@@ -22,41 +22,74 @@
 \tlcventry{2001}{2002}{Baccalauréat STI}{}{Option Électronique}{Lycée Antonin Artaud}{Marseille}{}
 
 \section{Compétences}
-\subsection{Conception}
-\cvlistitem{Méthode de développement: Méthodes Agiles, Scrum, TDD, KISS}
-\cvlistitem{Modélisation: UML, MERISE, MCD / MPD, design pattern}
+\subsection{Design}
+\cvlistitem{Méthode de développement: TDD, KISS}
+\cvlistitem{Réalisation de projet: Méthodes Agiles, Scrum}
+\cvlistitem{Modélisation: UML, MERISE, MCD / MPD, designs patterns}
 
 \subsection{Systèmes d'exploitations}
-\cvlistitem{Serveurs: Gentoo, Nixos, Debian}
+\cvlistitem{Serveurs: Gentoo, Nixos, CentOs, Debian}
 
 \subsection{Languages de programmation}
-\cvlistitem{Scripting: Bash, Python, Ruby, Lua}
-\cvlistitem{Languages compilés: C/C++, Go, Java}
-\cvlistitem{Web: XML, (X)HTML, CSS, JavaScript, PHP, Node.js}
+\cvlistitem{Scripting: Bash, Python}
+\cvlistitem{Languages compilés: C, Go}
+\cvlistitem{Web: JavaScript, Node.js, PHP}
 
-\subsection{Développement (Dev)}
+\subsection{Développement}
+\cvlistitem{Dev de feature en suivant une spec}
 \cvlistitem{Script git-hook de pre/post push/commit/*}
-\cvlistitem{Script de vérification (linter) du code et formatage}
+\cvlistitem{Script de vérification (linter) du code et test}
 \cvlistitem{Script de test de charge et fonctionnement avec rapport}
-\cvlistitem{Script de déploiement direct (local, preprod, prod)}
-\cvlistitem{Script de déploiement indirect sur évènements vcs (merge/tag/push)}
-\cvlistitem{Développement de fonctionnalités avec leurs tests et basés sur les spécifications}
-\cvlistitem{Corrections de bugs et suivis dans des retours utilisateurs dans un BugTracker}
 
 \subsection{Exploitation (Ops)}
-\cvlistitem{Script de sauvegarde et de synchronisation de la production}
-\cvlistitem{Mise en place et optimisation de serveur WEB type LAMP NGINX}
-\cvlistitem{Mise en place d'une architecture de production, avec redondance de serveurs (HAProxy)}
-\cvlistitem{Mise en place de conteneurs Docker/rkt de développement/production}
-\cvlistitem{Packaging de logiciel (Gentoo / Debian) et suivi de mises à jours}
+\cvlistitem{Déploiement automatisé depuis le ci/cd en testing / preprod / production}
+\cvlistitem{Mise en place de stack Docker (compose|cloud) de testing / preprod / prod}
+\cvlistitem{Déploiement d'application dans docker swarm depuis un ci/cd}
+\cvlistitem{Mise en place de load-balancer l4 (keepalived) ou l7 (HAProxy)}
+\cvlistitem{Packaging de logiciel (Gentoo / Debian / Centos) et suivi de mises à jours}
 \cvlistitem{Mise en place d'une plateforme de développement collaboratif avec versioning, en utilisant des méthodes agiles (Git)}
-\cvlistitem{Backporting de logiciels et correctifs, en utilisant plusieurs branches de maturation (stable/testing/unstable)}
+\cvlistitem{Monitoring d'applicatifs et de système dans une stack Elasticsearch, Logstash, Kibana}
+\cvlistitem{Monitoring d'équipement réseaux avec sflow-rt, telegraf, influxdb, graphana}
 
 \subsection{Sécurité (Sec)}
-\cvlistitem {Audit de serveurs, nmap / metasploit}
+\cvlistitem {Audit de serveurs, Suivi version, Backport de correctif}
 \cvlistitem {Analyse de faille, correctif et refactoring}
 
 \section{Expériences}
+
+\tlcventry{2017}{2020}{DevOps}{Orange-HebEx}{http://www.orange.fr}
+{Bagnolet / Sofia-antipolis}{
+  \begin{itemize}%
+    \item Travail en environnement SCRUM (jira).
+    \item Prototypage en vm avec Vagrant / libvirt|virtualbox / Ansible.
+    \item Utilisation de la librairie Molecule pour le dev/test des roles Ansible.
+    \item Développement de role ansible freeradius.
+    \item Développement de role ansible ldap (with proxy support).
+    \item Développement de role ansible systemd-network (+modele de conf specifique).
+    \item Développement de role ansible zsh-prompt.
+    \item Creation de playbooks de provisioning système des serveurs.
+    \item Création de playbooks de provisioning applicatif des serveurs.
+    \item Développement de sonde multipath (bash).
+    \item Dev d'un cluster docker swarm de test avec Ansible / Vagrant.
+    \item Création d'images docker spécialisés pour le ci/cd avec gitlab-ci.
+    \item Dev d'un script de packaging automatisé RPM (base sur MOCK) depuis gitlab-ci.
+    \item Backport / maintenance de patchs pour keepalived (C).
+    \item Packaging / maintenance de script de gestion pour keepalived (bash / python / rcs).
+    \item Packaging / maintenance de script de gestion pour haproxy (bash / python / rcs).
+    \item Packaging de logiciels manquants dans centos7 en RPM (snimpy, colordiff, etc).
+    \item Développement d'un script de gestion des IRQ de carte réseau sur les core d'un CPU (bash / python / irqbalance).
+    \item Benchmark firewall linux, en fonction des IRQ/Core et avec différentes carte réseaux / driver.
+    \item Développement de scripts ansible de test fonctionnel pour openstack.
+    \item Création d'images de base centos7, ubuntu14, ubuntu16 (packer / virtualbox|qemu).
+    \item Création de script de parsing de scan snmp vers inventaire ansible (ini / python).
+    \item Environnement Tech :
+      \begin{itemize}%
+        \item OS : Gentoo / Ubuntu LTS Server (12.04 / 14.04 / 16.04) / CentOS 7.
+        \item EDI : NeoVim.
+        \item Technologies : Vagrant, LibVirt, Python, Git, Ansible, Molecule
+        \item Serveur: keepalived, haproxy, quagga
+      \end{itemize}
+  \end{itemize}}
 
 \tlcventry{2016}{2017}{DevOps}{Display-Interactive}{http://www.ugo-ife.com/}
 {Montrouge / Xiamen}{
@@ -68,14 +101,15 @@
     \item Mise en place de lab raspberry (*100) pour tests de charges (chef-serveur, chef-client, python, bash).
     \item Customisation de l'image de base Raspbian (kernel, services, pilotes).
     \item Maintenance de fichiers de provisionning chef.
+    \item Realisation et maintenance de script de recuperation d'images de VM depuis serveur ou AWS (Python).
     \item Déplacement sur site (Xiamen, Chine) et intervention (Admin + debug) sur avion.
-    \item Mise en place d'un depot de paquet Debian avec signature GPG.
+    \item Mise en place d'un dépôt de paquet Debian avec signature GPG.
     \item Packaging d'applications au format deb.
     \item Environnement Tech :
       \begin{itemize}%
         \item OS : Gentoo / Ubuntu LTS Server (14.04 / 16.04), Raspbian.
         \item EDI : NeoVim.
-        \item Technologies : PHP, NodeJs, Py, Git, Bash, git.
+        \item Technologies : PHP, NodeJs, Python, Git, Bash, git.
       \end{itemize}
   \end{itemize}}
 
@@ -227,7 +261,7 @@
 \cvlanguage{Espagnol}{Scolaire}{Bases scolaires.}
 
 \section{Centres d'intérêts}
-\cvhobby{Jeu de stratégie}{Jeu de go, Échecs, MTG}
+\cvhobby{Jeu de stratégie}{Jeu de go, MTG}
 \cvhobby{Open Source Enthousiaste}{Plusieurs projets actifs sur Github}
 \cvhobby{Autres}{Voyages, Musique, lecture}
 
