@@ -1,7 +1,7 @@
 % --------------------------------------------------
 % @author Guillaume Seren
 % source  https://github.com/GuillaumeSeren/CurriculumVitae
-% file    GuillaumeSeren_fr.tex
+% file    GuillaumeSeren_en.tex
 % Licence GPLv3
 %
 % Latex main file.
@@ -15,115 +15,81 @@
 
 \makecvtitle
 
-\section{Formations}
-\tlcventry{2008}{2009}{Formation J2EE \& .NET}{}{}{École du CESI}{Aix-en-Provence}{}
-\tlcventry{2005}{2007}{BTS Informatique de Gestion}{}{Option Développeur d'applications}{Ecole Charlotte Grawitz}{Marseille}{}
-\tlcventry{2002}{2004}{DEUG de psychologie}{}{}{Faculté de lettres}{Aix-en-Provence}{}
-\tlcventry{2001}{2002}{Baccalauréat STI}{}{Option Électronique}{Lycée Antonin Artaud}{Marseille}{}
+\section{Training}
+\tlcventry{2008}{2009}{J2EE \& .NET training}{+3}{}{CESI school}{Aix-en-Provence}{}
+\tlcventry{2005}{2007}{BTS Management Information Systems}{}{Application Developer Option}{Ecole Charlotte Grawitz}{Marseille}{}
+\tlcventry{2002}{2004}{DEUG de psychology}{}{}{Faculté de lettres}{Aix-en-Provence}{}
+\tlcventry{2001}{2002}{Baccalauréat STI}{}{Electronic Option}{Lycée Antonin Artaud}{Marseille}{}
 
-\section{Compétences}
-\subsection{Design}
-\cvlistitem{Méthode de développement: TDD, KISS}
-\cvlistitem{Réalisation de projet: Méthodes Agiles, Scrum}
-\cvlistitem{Modélisation: UML, MERISE, MCD / MPD, designs patterns}
+\section{Skills}
+\subsection{Engineering}
+\cvlistitem{Software Development: Agile, Scrum, TDD, KISS}
+\cvlistitem{Modelisation: UML, MERISE, CDM / PDM, design pattern}
 
-\subsection{Systèmes d'exploitations}
-\cvlistitem{Serveurs: Gentoo, Nixos, CentOs, Debian}
+\subsection{Operating Systems}
+\cvlistitem{Server: Gentoo, Nixos, Debian}
 
-\subsection{Languages de programmation}
-\cvlistitem{Scripting: Bash, Python}
-\cvlistitem{Languages compilés: C, Go}
-\cvlistitem{Web: JavaScript, Node.js, PHP}
+\subsection{Programming languages}
+\cvlistitem{Scripting: Bash, Python, Ruby, Lua}
+\cvlistitem{Compiled: C/C++, Go, Java}
+\cvlistitem{Web: XML, (X)HTML, CSS, JavaScript, PHP, Node.js}
 
-\subsection{Développement}
-\cvlistitem{Dev de feature en suivant une spec}
-\cvlistitem{Script git-hook de pre/post push/commit/*}
-\cvlistitem{Script de vérification (linter) du code et test}
-\cvlistitem{Script de test de charge et fonctionnement avec rapport}
+\subsection{Development (Dev)}
+\cvlistitem{Git-Hook script on pre/post push/commit/*}
+\cvlistitem{Test/Linter script of the code validity and code convention}
+\cvlistitem{Load / stress test script}
+\cvlistitem{Deployment script (local, preprod, prod)}
+\cvlistitem{Deployement on VCS event script (merge/tag/push)}
+\cvlistitem{Development of features with tests based on the specifications}
+\cvlistitem{Bug fixing and tracking of feedback from users in a BugTracker}
 
-\subsection{Exploitation (Ops)}
-\cvlistitem{Déploiement automatisé depuis le ci/cd en testing / preprod / production}
-\cvlistitem{Mise en place de stack Docker (compose|cloud) de testing / preprod / prod}
-\cvlistitem{Déploiement d'application dans docker swarm depuis un ci/cd}
-\cvlistitem{Mise en place de load-balancer l4 (keepalived) ou l7 (HAProxy)}
-\cvlistitem{Packaging de logiciel (Gentoo / Debian / Centos) et suivi de mises à jours}
-\cvlistitem{Mise en place d'une plateforme de développement collaboratif avec versioning, en utilisant des méthodes agiles (Git)}
-\cvlistitem{Monitoring d'applicatifs et de système dans une stack Elasticsearch, Logstash, Kibana}
-\cvlistitem{Monitoring d'équipement réseaux avec sflow-rt, telegraf, influxdb, graphana}
+\subsection{Operation (Ops)}
+\cvlistitem{Backup and synchronisation script of production}
+\cvlistitem{Setup and optimisation of Web server LAMP (Apache/NGINX)}
+\cvlistitem{Setup of production's servers with redundancy (HAProxy)}
+\cvlistitem{Setup of Docker's containers architecture (docker-compose)}
+\cvlistitem{Software packaging (Gentoo / Debian) followup security and upgrades}
+\cvlistitem{Setup application of collaborative development with versioning using agile methodology (Git)}
+\cvlistitem{Backport of software updates and fixes, using several branches (stable/testing/unstable)}
 
-\subsection{Sécurité (Sec)}
-\cvlistitem {Audit de serveurs, Suivi version, Backport de correctif}
-\cvlistitem {Analyse de faille, correctif et refactoring}
+\subsection{Security (Sec)}
+\cvlistitem{Security Auditing, nmap / metasploit}
+\cvlistitem{Security flaw analysis, fixing issue and refactoring}
 
-\section{Expériences}
-
-\tlcventry{2017}{2020}{DevOps}{Orange-HebEx}{http://www.orange.fr}
-{Bagnolet / Sofia-antipolis}{
-  \begin{itemize}%
-    \item Travail en environnement SCRUM (jira).
-    \item Prototypage en vm avec Vagrant / libvirt|virtualbox / Ansible.
-    \item Utilisation de la librairie Molecule pour le dev/test des roles Ansible.
-    \item Développement de role ansible freeradius.
-    \item Développement de role ansible ldap (with proxy support).
-    \item Développement de role ansible systemd-network (+modele de conf specifique).
-    \item Développement de role ansible zsh-prompt.
-    \item Creation de playbooks de provisioning système des serveurs.
-    \item Création de playbooks de provisioning applicatif des serveurs.
-    \item Développement de sonde multipath (bash).
-    \item Dev d'un cluster docker swarm de test avec Ansible / Vagrant.
-    \item Création d'images docker spécialisés pour le ci/cd avec gitlab-ci.
-    \item Dev d'un script de packaging automatisé RPM (base sur MOCK) depuis gitlab-ci.
-    \item Backport / maintenance de patchs pour keepalived (C).
-    \item Packaging / maintenance de script de gestion pour keepalived (bash / python / rcs).
-    \item Packaging / maintenance de script de gestion pour haproxy (bash / python / rcs).
-    \item Packaging de logiciels manquants dans centos7 en RPM (snimpy, colordiff, etc).
-    \item Développement d'un script de gestion des IRQ de carte réseau sur les core d'un CPU (bash / python / irqbalance).
-    \item Benchmark firewall linux, en fonction des IRQ/Core et avec différentes carte réseaux / driver.
-    \item Développement de scripts ansible de test fonctionnel pour openstack.
-    \item Création d'images de base centos7, ubuntu14, ubuntu16 (packer / virtualbox|qemu).
-    \item Création de script de parsing de scan snmp vers inventaire ansible (ini / python).
-    \item Environnement Tech :
-      \begin{itemize}%
-        \item OS : Gentoo / Ubuntu LTS Server (12.04 / 14.04 / 16.04) / CentOS 7.
-        \item EDI : NeoVim.
-        \item Technologies : Vagrant, LibVirt, Python, Git, Ansible, Molecule
-        \item Serveur: keepalived, haproxy, quagga
-      \end{itemize}
-  \end{itemize}}
+\section{Experiences}
 
 \tlcventry{2016}{2017}{DevOps}{Display-Interactive}{http://www.ugo-ife.com/}
 {Montrouge / Xiamen}{
   \begin{itemize}%
-    \item Travail en environnement SCRUM (jira).
-    \item Script de build de machines virtuelles (bash, packer, virtualbox, qemu).
-    \item Script de déploiement sur serveur physique (bash, qemu) de machines virtuelles.
-    \item Script de provisionning pour serveur de test (bash, nginx, jplayer).
-    \item Mise en place de lab raspberry (*100) pour tests de charges (chef-serveur, chef-client, python, bash).
-    \item Customisation de l'image de base Raspbian (kernel, services, pilotes).
-    \item Maintenance de fichiers de provisionning chef.
-    \item Realisation et maintenance de script de recuperation d'images de VM depuis serveur ou AWS (Python).
-    \item Déplacement sur site (Xiamen, Chine) et intervention (Admin + debug) sur avion.
-    \item Mise en place d'un dépôt de paquet Debian avec signature GPG.
-    \item Packaging d'applications au format deb.
-    \item Environnement Tech :
+    \item Work in SCRUM environment (jira).
+    \item Virtual Machine building script (bash, packer, virtualbox, qemu).
+    \item Virtual Machine deploy script on bare metal (bash, qemu).
+    \item Provisioning script for test server (bash, nginx, jplayer).
+    \item Setup of raspberry's lab (*100) for load-tests (chef-serveur, chef-client, python, bash).
+    \item Customisation of the Raspbian base image (kernel, services, drivers).
+    \item Maintain and upgrade of chef recipes.
+    \item Moving to remote site (Xiamen, China) and work (Admin + debug) on plane.
+    \item Setup of package depot for Debian with GPG signature.
+    \item Packaging of applications in deb format.
+    \item Technical Environnement :
       \begin{itemize}%
         \item OS : Gentoo / Ubuntu LTS Server (14.04 / 16.04), Raspbian.
         \item EDI : NeoVim.
-        \item Technologies : PHP, NodeJs, Python, Git, Bash, git.
+        \item Technologies : PHP, NodeJs, Py, Git, Bash, git.
       \end{itemize}
   \end{itemize}}
 
 \tlcventry{2015}{2016}{DevOps}{WedZem}{WedZem.com}
 {Paris}{
   \begin{itemize}%
-    \item Refactoring d'un template WordPress (less, Bootstrap).
-    \item Mise en place d'une stack web en container (docker-compose).
-    \item Admin de vm dev/test/prod dans un serveur physique (Proxmox).
-    \item Maintenance de projets et suivi (Git, GitLab).
-    \item Environnement Tech :
+    \item Refactoring of a WordPress's template (less, Bootstrap).
+    \item Setup of a container's web stack (docker-compose).
+    \item Admin of dev/test/prod vm in a physical server (Proxmox).
+    \item Maintain projects and followup (Git, GitLab).
+    \item Technical Environnement :
       \begin{itemize}%
         \item OS : Gentoo / Debian 8.
-        \item Bases de données : Mysql 5.5.
+        \item Database : Mysql 5.5.
         \item EDI : Vim, Netbeans, Mysql Workbench.
         \item Technologies : PHP, JS, SQL, Py, Git, Bash, git.
       \end{itemize}
@@ -256,14 +222,14 @@
   \end{itemize}}
 
 
-\section{Langues}
-\cvlanguage{Anglais}{Courant}{Pratique régulière.}
-\cvlanguage{Espagnol}{Scolaire}{Bases scolaires.}
+\section{Languages}
+\cvlanguage{Anglais}{fluent}{Regular practice.}
+\cvlanguage{Spanish}{school}{Basic understanding.}
 
-\section{Centres d'intérêts}
-\cvhobby{Jeu de stratégie}{Jeu de go, MTG}
-\cvhobby{Open Source Enthousiaste}{Plusieurs projets actifs sur Github}
-\cvhobby{Autres}{Voyages, Musique, lecture}
+\section{Hobbies}
+\cvhobby{Strategy games}{go, chess, MTG}
+\cvhobby{Open Source Enthusiast}{Several active project on Github}
+\cvhobby{Others}{Travel, Music, Reading}
 
 \clearpage
 \end{document}

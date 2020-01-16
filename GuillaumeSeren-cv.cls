@@ -6,7 +6,7 @@
 %
 % Class file for latex cv
 % --------------------------------------------------
-\ProvidesClass{GuillaumeSeren-cv}[2015/06/10 CV class]
+\ProvidesClass{GuillaumeSeren-cv}[2020/01/16 CV class]
 \NeedsTeXFormat{LaTeX2e}
 
 \DeclareOption{print}{\def\@cv@print{}}
@@ -15,7 +15,7 @@
 \LoadClass{article}
 
 %===============================================
-% COLORS 
+% COLORS
 %===============================================
 
 \RequirePackage{xcolor}
@@ -49,7 +49,7 @@
 \colorlet{headercolor}{gray}
 
 %===============================================
-% FONTS 
+% FONTS
 %===============================================
 
 %-----------------------------------------------
@@ -119,13 +119,13 @@
     \circleFull\circleFull\circleFull\circleFull\circleEmpty
 \else\ifnum#1=5
     \circleFull\circleFull\circleFull\circleFull\circleFull
-\else 
+\else
     \circleEmpty\circleEmpty\circleEmpty\circleEmpty\circleEmpty
 \fi\fi\fi\fi\fi
 }
 
 %===============================================
-% HEADER 
+% HEADER
 %===============================================
 
 \RequirePackage{tikz}
@@ -150,7 +150,7 @@
 }
 
 %===============================================
-% STRUCTURE 
+% STRUCTURE
 %===============================================
 
 \RequirePackage{parskip}
@@ -190,7 +190,7 @@
 \pagestyle{empty}
 
 %===============================================
-% LIST ENVIRONMENT 
+% LIST ENVIRONMENT
 %===============================================
 
 %\usepackage{tabularx}
@@ -215,7 +215,7 @@
      \footnotesize\addfontfeature{Color=lightgray}#3}\\
      \footnotesize#4\vspace{\parsep}%
   }\vspace{5pt}\\}
-  
+
 \newcommand{\entryMod}[5]{%
   #1&\parbox[t]{11.85cm}{%
      \large\textbf{#2}\hfill{%
@@ -223,7 +223,7 @@
      \small\emph{#4}\vspace{5pt}\\
      \footnotesize\addfontfeature{Color=gray}#5\vspace{\parsep}%
   }\vspace{5pt}\\}
-  
+
 \newcommand{\entryBul}[5]
   {#1&\parbox[t]{11.85cm}{
         \large\textbf{#2}\hfill{%
@@ -231,13 +231,13 @@
         \small\emph{#4}\vspace{1pt}
         \footnotesize\addfontfeature{Color=gray}#5\vspace{\parsep}%
         }\vspace{5pt}\\}
-  
+
 \newcommand{\entryAlt}[3]{%
   #1&\parbox[t]{11.85cm}{%
     \large\textbf{#2}\hfill%
     {\footnotesize\addfontfeature{Color=lightgray}#3}
-  }\vspace{5pt}\\} 
-  
+  }\vspace{5pt}\\}
+
 \newcommand{\entryFULL}[5]
   {#1&\parbox[t]{16.5cm}{
         \large\textbf{#2}\hfill{%
@@ -247,7 +247,7 @@
         }\vspace{5pt}\\}
 
 %===============================================
-% SIDE BLOCK 
+% SIDE BLOCK
 %===============================================
 
 \RequirePackage[absolute,overlay]{textpos}
@@ -285,19 +285,19 @@
 }
 
 %===============================================
-% OTHER TWEAKS 
+% OTHER TWEAKS
 %===============================================
 
 \RequirePackage[left=1.25cm,top=2cm,right=6.5cm,bottom=1.25cm,nohead,nofoot]{geometry}
 \definecolor{lblue}{HTML}{0000EE}
 \RequirePackage[hidelinks]{hyperref}
 \hypersetup{
-    colorlinks=true,       
-    linkcolor=lblue,          
-    citecolor=lblue,        
-    filecolor=lblue,      
+    colorlinks=true,
+    linkcolor=lblue,
+    citecolor=lblue,
+    filecolor=lblue,
     urlcolor = lblue}
-    
+
 % A fix for \href{}{} colors not working with fontspec
 \makeatletter
 \def\HyColor@@@@UseColor#1\@nil{\addfontfeatures{Color=#1}}
