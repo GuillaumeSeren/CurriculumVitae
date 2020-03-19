@@ -30,33 +30,29 @@
 \fi
 
 \ifxetexorluatex
-\usepackage{fontspec}
-\defaultfontfeatures{Ligatures=TeX}
+  \usepackage{fontspec}
+  \defaultfontfeatures{Ligatures=TeX}
 \else
-\newcommand\githubfont{}
-\newcommand\linkedinfont{}
+  \newcommand\githubfont{}
+  \newcommand\linkedinfont{}
 \fi
 
 \usepackage{microtype}
 
-\newcommand\octocat{{\githubfont\char"F209}}
-\newcommand\linkedin{%
-\scalebox{0.7}{%
-\begin{tikzpicture}[baseline]%
-\node[fill=color2,rounded corners=2pt,anchor=base] {%
-\linkedinfont\bfseries\upshape\color{white}{in}%
-};%
-\end{tikzpicture}}}
+% https://github.com/jnsebgosselin/Curriculum-Vitae/blob/master/friggos-cv.cls
+\newfontfamily{\FA}[Path = fonts/]{fontawesome-webfont}
 
-% personal data
-\firstname{Guillaume}
-\familyname{Seren}
-\title{Développeur Gnu/Linux Freelance}
-\address{18, rue le bua}{75020, Paris}{Nationalité Francaise}
-\email{guillaumeseren@gmail.com}
-\extrainfo{Permis B \& Véhicule}
-\homepage{guillaumeseren.com}
-\quote{« As long as I'm learning something, I figure I'm OK - it's a decent day. » Hunter S. Thompson}
+\def\github{\color{gray}{\FA\symbol{"F092}}}
+\def\linkedin{\color{gray}{\FA\symbol{"F08C}}}
+\def\facebook{\color{gray}{\FA\symbol{"F082}}}
+\def\phoneb{\color{gray}{\FA\symbol{"F098}}}
+\def\home{\color{gray}{\FA\symbol{"F015}}}
+\def\mail{\color{gray}{\FA\symbol{"F0E0}}}
+\def\globe{\color{gray}{\FA\symbol{"F0AC}}}
+
+\def\circleFull{\small\color{gray}{\FA\symbol{"F111}}\hspace{0.15cm}}
+\def\circleEmpty{\small\color{gray}{\FA\symbol{"F10C}}\hspace{0.15cm}}
+
 
 \AtBeginDocument{\renewcommand{\labelitemi}{-- }}
 
@@ -82,7 +78,7 @@
     }}%
 
 
-% Refine quote 
+% Refine quote
 \newcommand*{\myquote}[2]{%
    \quote{\itshape #1 \\ \scshape \footnotesize #2}}
 
