@@ -11,71 +11,115 @@
 \documentclass[10pt,a4paper,sans]{moderncv}
 
 \usepackage{GuillaumeSeren}
+% personal data
+\firstname{Guillaume}
+\familyname{Seren}
+\title{Developer Gnu/Linux Freelance}
+\address{18, rue le bua}{75020, Paris}{French nationality}
+\email{guillaumeseren@gmail.com}
+\extrainfo{%
+  \linkedin~\httplink{https://www.linkedin.com/in/GuillaumeSeren}\\%
+  \github~\httplink{https://github.com/GuillaumeSeren}\\%
+Permis B%
+}
+\homepage{guillaumeseren.com}
+\quote{« As long as I'm learning something, I figure I'm OK - it's a decent day. » Hunter S. Thompson}
 \begin{document}
 
 \makecvtitle
 
 \section{Training}
-\tlcventry{2008}{2009}{J2EE \& .NET training}{+3}{}{CESI school}{Aix-en-Provence}{}
-\tlcventry{2005}{2007}{BTS Management Information Systems}{}{Application Developer Option}{Ecole Charlotte Grawitz}{Marseille}{}
+\tlcventry{2008}{2009}{J2EE \& .NET training}{}{}{CESI school}{Aix-en-Provence}{}
+\tlcventry{2005}{2007}{BTS Information Systems}{}{Application Developer Option}{Ecole Charlotte Grawitz}{Marseille}{}
 \tlcventry{2002}{2004}{DEUG de psychology}{}{}{Faculté de lettres}{Aix-en-Provence}{}
 \tlcventry{2001}{2002}{Baccalauréat STI}{}{Electronic Option}{Lycée Antonin Artaud}{Marseille}{}
 
 \section{Skills}
 \subsection{Engineering}
-\cvlistitem{Software Development: Agile, Scrum, TDD, KISS}
-\cvlistitem{Modelisation: UML, MERISE, CDM / PDM, design pattern}
+\cvlistitem{Software Development: TDD, KISS}
+\cvlistitem{Team/Project: Agile, Scrum}
+\cvlistitem{Modelisation: UML, MERISE, design pattern}
 
 \subsection{Operating Systems}
-\cvlistitem{Server: Gentoo, Nixos, Debian}
+\cvlistitem{Server: Gentoo, Nixos, Centos, Debian}
 
 \subsection{Programming languages}
-\cvlistitem{Scripting: Bash, Python, Ruby, Lua}
-\cvlistitem{Compiled: C/C++, Go, Java}
-\cvlistitem{Web: XML, (X)HTML, CSS, JavaScript, PHP, Node.js}
+\cvlistitem{Scripting: Bash, Python}
+\cvlistitem{Compiled: C, Go}
+\cvlistitem{Web: JavaScript, Node.js, PHP}
 
-\subsection{Development (Dev)}
-\cvlistitem{Git-Hook script on pre/post push/commit/*}
+\subsection{Development}
+\cvlistitem{Development of features with tests based on the specifications}
 \cvlistitem{Test/Linter script of the code validity and code convention}
 \cvlistitem{Load / stress test script}
-\cvlistitem{Deployment script (local, preprod, prod)}
-\cvlistitem{Deployement on VCS event script (merge/tag/push)}
-\cvlistitem{Development of features with tests based on the specifications}
-\cvlistitem{Bug fixing and tracking of feedback from users in a BugTracker}
 
-\subsection{Operation (Ops)}
-\cvlistitem{Backup and synchronisation script of production}
-\cvlistitem{Setup and optimisation of Web server LAMP (Apache/NGINX)}
-\cvlistitem{Setup of production's servers with redundancy (HAProxy)}
-\cvlistitem{Setup of Docker's containers architecture (docker-compose)}
-\cvlistitem{Software packaging (Gentoo / Debian) followup security and upgrades}
-\cvlistitem{Setup application of collaborative development with versioning using agile methodology (Git)}
-\cvlistitem{Backport of software updates and fixes, using several branches (stable/testing/unstable)}
+\subsection{Operation}
+\cvlistitem{Deploy of application from ci/cd}
+\cvlistitem{Create and maintain docker stack (compose|cloud)}
+\cvlistitem{Deploy application to docker swarm from ci/cd}
+\cvlistitem{Setup load balancer l4 (keepalived) or l7 (HAProxy)}
+\cvlistitem{Packaging software for (Gentoo / Debian / CentOs) and maintenance}
+\cvlistitem{Monitoring application and system in a stack Elasticsearch, Logstash, Kibana}
+\cvlistitem{Monitoring network devices with sflow-rt, telegraf, influxdb, graphana}
 
-\subsection{Security (Sec)}
-\cvlistitem{Security Auditing, nmap / metasploit}
-\cvlistitem{Security flaw analysis, fixing issue and refactoring}
+\subsection{Security}
+\cvlistitem{Security Auditing, backport fixes}
 
 \section{Experiences}
+
+\tlcventry{2017}{2020}{DevOps}{Orange-HebEx}{http://www.orange.fr}
+{Bagnolet / Sofia-antipolis}{
+  \begin{itemize}%
+    \item Work with SCRUM and jira.
+    \item Create prototype of vm with Vagrant / libvirt|virtualbox / Ansible.
+    \item Create ansible role with  Molecule tests.
+    \item Create ansible role freeradius.
+    \item Create ansible role ldap (with proxy support).
+    \item Create ansible role systemd-network (+yaml net config).
+    \item Create ansible role zsh-prompt.
+    \item Create ansible playbooks for sytem provisioning.
+    \item Create ansible playbooks for application provisioning.
+    \item Dev of a script to test multipath (bash).
+    \item Dev of cluster vm for docker swarm testing with Ansible / Vagrant.
+    \item Create docker image specialised for ci/cd with gitlab-ci.
+    \item Dev of script for automatised packaging RPM (on top of MOCK).
+    \item Backport / maintenance patchs for keepalived (C).
+    \item Packaging / maintenance of management script for keepalived (bash / python / rcs).
+    \item Packaging / maintenance of management script for haproxy (bash / python / rcs).
+    \item Packaging missing software for centos7 en RPM (snimpy, colordiff, etc).
+    \item Dev script of to manage IRQ of NIC on specific core of a CPU (bash / python / irqbalance).
+    \item Benchmark linux firewall, depending on number of IRQ/Core with several NIC / driver.
+    \item Dev ansible playbook to test openstack platform.
+    \item Create base image for centos7, ubuntu14, ubuntu16 (packer / virtualbox|qemu).
+    \item Create parsing script to convert scan snmp to ansible inventory (ini / python).
+    \item Environnement Tech :
+      \begin{itemize}%
+        \item OS : Gentoo / Ubuntu LTS Server (12.04 / 14.04 / 16.04) / CentOS 7.
+        \item EDI : NeoVim.
+        \item Technologies : Vagrant, LibVirt, Python, Git, Ansible, Molecule
+        \item Serveur: keepalived, haproxy, quagga
+      \end{itemize}
+  \end{itemize}}
 
 \tlcventry{2016}{2017}{DevOps}{Display-Interactive}{http://www.ugo-ife.com/}
 {Montrouge / Xiamen}{
   \begin{itemize}%
-    \item Work in SCRUM environment (jira).
-    \item Virtual Machine building script (bash, packer, virtualbox, qemu).
-    \item Virtual Machine deploy script on bare metal (bash, qemu).
-    \item Provisioning script for test server (bash, nginx, jplayer).
+    \item Work with SCRUM and jira.
+    \item Dev script to build vm image (bash, packer, virtualbox, qemu).
+    \item Dev script to deploy on bare metal testing server (bash, qemu).
+    \item Dev script to provision test server (bash, nginx, jplayer).
     \item Setup of raspberry's lab (*100) for load-tests (chef-serveur, chef-client, python, bash).
     \item Customisation of the Raspbian base image (kernel, services, drivers).
     \item Maintain and upgrade of chef recipes.
+    \item Dev script of vm images manipulation from server or AWS bucket S3 (Python).
     \item Moving to remote site (Xiamen, China) and work (Admin + debug) on plane.
-    \item Setup of package depot for Debian with GPG signature.
+    \item Setup of Debian package depot for with GPG signature.
     \item Packaging of applications in deb format.
     \item Technical Environnement :
       \begin{itemize}%
         \item OS : Gentoo / Ubuntu LTS Server (14.04 / 16.04), Raspbian.
         \item EDI : NeoVim.
-        \item Technologies : PHP, NodeJs, Py, Git, Bash, git.
+        \item Technologies : PHP, NodeJs, Python, Git, Bash, git.
       \end{itemize}
   \end{itemize}}
 
@@ -95,22 +139,20 @@
       \end{itemize}
   \end{itemize}}
 
-\tlcventry{2013}{2015}{Ingénieur d'études}{Starpass}{BdMultimédia}
+\tlcventry{2013}{2015}{Developer}{Starpass}{BdMultimédia}
 {Paris}{
   \begin{itemize}%
-    \item Mise en place de Méthodes Agiles, avec SCRUM.
-    \item Développement d'un SCM → GIT, pour gestion de l'application Starpass, sous la forme de 3 branches de codes de bases, sur lesquelles s'appuient les évolutions / modifications, validations, production.
-    \item Réalisation de script de snapshot, pour faciliter le suivi et la transition, vers le SCM.
-    \item Script de création et mise en place d'utilisateurs Unix, permettant aux différents utilisateurs l'accès à leur espace personnalisé, avec plateforme de test, et accès aux divers scripts.
-    \item Script de déploiement, local, et distant, avec un support d'appel de scripts de test, pré/post opératoires.
-    \item Script de test fonctionnel, retourne les status HTTP, des ressources et leur temps de réponse, afin de permettre benchmarking du temps et analyse fonctionnel de l'application.
-    \item Script d'audit de code PHP, et JS, analyse du code inutile, problèmes d'encodages, path, include, indentation, etc.
-    \item Formation aux Méthodes Agiles, de l'équipe en place et rédaction de documentations.
-    \item Mise en place de cygwin, sur les machines non-unix, afin de pouvoir utiliser directement les scripts réalisés.
-    \item Réalisation d'une étude, avec specifications techniques pour le développement de modules de com et jeu supplémentaires (UML classes, séquences, MCD).
-    \item Création d'un MCD pour la DB existante.
-    \item Refactoring / versionning de la DB (structure) ainsi que des patch d'évolutions.
-    \item Ajout d'un système de gestion des évolution (patch) pour faciliter le suivi des différentes versions du projet.
+    \item Setup SCRUM to the team.
+    \item Setup a git SCM, using 3 branch unstable / testing / stable.
+    \item Dev snapshot script to help monitoring the migration to the SCM.
+    \item Dev script to create / manage Linux user with env, tests and doc.
+    \item Dev script to deploy, local, and remote with several tests.
+    \item Dev script to test web-app, discover linkgs, check HTTP status and timings.
+    \item Dev script to audit PHP/JS code, find useless, encoding, path, include, indentation.
+    \item Training of Agile developement, and docs.
+    \item Setup cygwin, for non-unix machine.
+    \item Create schema (merise) of a existing database.
+    \item Refactoring / versionning of DB (structure) and upgrade with scripts.
     \item Environnement Tech :
       \begin{itemize}%
         \item OS : Debian 6 / 7.
@@ -120,19 +162,19 @@
       \end{itemize}
   \end{itemize}}
 
-\tlcventry{2012}{2013}{Ingénieur d'études}{Renault Retail Group}{Purjus}
+\tlcventry{2012}{2013}{Developer}{Renault Retail Group}{Purjus}
 {Paris}{
   \begin{itemize}%
-    \item Création d'une plateforme centralisé http://renault-retail-group.fr.
-    \item Développement de 7 espaces dédiés régionaux, comme http://paris.renault-retail-group.fr/.
-    \item Modélisation et mise en place d'une base de donnée centralisé, en suivant la méthode MERISE.
-    \item Mise en place d'une plateforme de développement collaboratif basé sur, svn et trac, pour permettre le suivi et traitement des demandes et modifications.
-    \item Développement de diagrammes uml, et implémentation dans le projet.
-    \item Mise en place d'une plateforme de pré-production.
-    \item Gestion d'un dépôt svn, avec plusieurs branches principales : Production / Pré-production / Développement.
-    \item Chaque correctifs, et/ou fonctionnalités sont entreposés dans leur propres branches.
-    \item Développement des fonctionnalités en suivant le framework Joomla.
-    \item Réalisations de vues mysql.
+    \item Create centralised platform http://renault-retail-group.fr.
+    \item Create 7 dedicated regional spaces, like http://paris.renault-retail-group.fr/.
+    \item Create a database using MERISE method.
+    \item Create a collaborative dev platform, using svn and trac.
+    \item Create UML diagram, and dev them in the projet.
+    \item Create a testing platform.
+    \item Managing a SVN depot, with 3 branches: unstable / testing / stable.
+    \item Managing feature and bugfix branches in SVN.
+    \item Dev feature following the Joomla framework.
+    \item Creating mysql view.
     \item Environnement Tech :
       \begin{itemize}%
         \item OS : Debian, freeBSD.
@@ -144,14 +186,14 @@
       \end{itemize}
   \end{itemize}}
 
-\tlcventry{2010}{2012}{Développeur}{Renault Paris}{Purjus}
+\tlcventry{2010}{2012}{Developer}{Renault Paris}{Purjus}
 {Paris}{
   \begin{itemize}%
-    \item Développements sur le projet : http://renaultparis.fr
-    \item Développement du module CRUD de gestion des leads et demande client depuis le back-end.
-    \item Outil de demande d'informations, et de prise de contacts clients depuis le front-end.
-    \item Affichage du stock disponible, et gestion du processus de lead sur un produit.
-    \item Mise en place d'une plateforme de versionning, SVN.
+    \item Dev web on the project (PHP) : http://renaultparis.fr
+    \item Dev of CRUD module to manage leads on the back-end.
+    \item Dev information form in the front-end.
+    \item Dev module to manage stock on the back-end.
+    \item Create a SVN platform.
     \item Environnement Tech :
       \begin{itemize}%
         \item OS : Debian, freeBSD.
@@ -163,13 +205,13 @@
       \end{itemize}
   \end{itemize}}
 
-\tlcventry {2008}{2010}{Ingénieur d'études}{KP1}{GFI}
+\tlcventry {2008}{2010}{Developer}{KP1}{GFI}
 {Avignon}{
   \begin{itemize}%
-    \item Réalisation d'un moteur de calcul basé sur des formules.
-    \item Stockage d'une partie des paramètres dans une base de donnée.
+    \item Dev computation engine based on formulas.
+    \item Create and manage a database to store some params.
     \item Mise un place d'un cache objet Jcs.
-    \item Réalisation d'une batterie de test unitaire basé sur jUnit.
+    \item Dev test suite for the project with jUnit.
     \item Environnement Tech :
       \begin{itemize}%
         \item OS : Debian, Windows Xp, Windows 2003 Serveur, VMWare.
@@ -181,14 +223,13 @@
       \end{itemize}
   \end{itemize}}
 
-\tlcventry {2007}{2008}{Administrateur systèmes}{Mairie de Marseille}{Computacenter}
+\tlcventry {2007}{2008}{Sysadmin}{Mairie de Marseille}{Computacenter}
 {Marseille}{
   \begin{itemize}%
-    \item Administration de serveurs pré-production et production.
-    \item Mise en place de test de redémarrage des services.
-    \item Mise en place de test de montée en charge.
-    \item Sauvegarde des données sensibles.
-    \item Travail en environnement hétérogène.
+    \item Managing testing and production server.
+    \item Managing tests and services check.
+    \item Dev and manage load test.
+    \item Backup server and database.
     \item Environnement Tech :
       \begin{itemize}%
         \item OS : Debian, Win2003, RedHat Entreprise, Ubuntu.
@@ -198,18 +239,15 @@
       \end{itemize}
   \end{itemize}}
 
-\tlcventry {2005}{2007}{Développeur}{Liligo}{Findworks Technologies}
+\tlcventry {2005}{2007}{Developer}{Liligo}{Findworks Technologies}
 {Paris}{
   \begin{itemize}%
-    \item Travail sur le projet : http://www.liligo.com/
-    \item Gestion de bases de données.
-    \item Développement de script de parsing coté serveur en JS.
-    \item Développement de script de parsing de site web, en PERL.
-    \item Développement d'IHM de l'application Web.
-    \item Développement du modèle XHTML suivant une charte graphique.
-    \item Développement de l’habillage du style de l'application en CSS.
-    \item Analyse et gestion du Search Engine Optimisation, SEO.
-    \item Contrôle qualité et test de montée en charge.
+    \item Dev web on the project : http://www.liligo.com/
+    \item Dev parsing script with server-side (JS).
+    \item Dev scrapping script for website (PERL).
+    \item Dev XHTML/css following graphical chart.
+    \item Study on SEO.
+    \item Quality control and load test.
     \item Environnement Tech :
       \begin{itemize}%
         \item OS : Debian, WinXP.
@@ -223,7 +261,7 @@
 
 
 \section{Languages}
-\cvlanguage{Anglais}{fluent}{Regular practice.}
+\cvlanguage{Anglais}{Advanced}{Regular practice.}
 \cvlanguage{Spanish}{school}{Basic understanding.}
 
 \section{Hobbies}
