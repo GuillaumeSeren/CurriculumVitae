@@ -14,64 +14,101 @@
 % personal data
 \firstname{Guillaume}
 \familyname{Seren}
-\title{Developer Gnu/Linux Freelance}
-\address{18, rue le bua}{75020, Paris}{French nationality}
+\title{DevOps / Linux Engineer}
 \email{guillaumeseren@gmail.com}
 \extrainfo{%
   \linkedin~\httplink{https://www.linkedin.com/in/GuillaumeSeren}\\%
   \github~\httplink{https://github.com/GuillaumeSeren}\\%
 Permis B%
 }
-\homepage{guillaumeseren.com}
-\quote{« As long as I'm learning something, I figure I'm OK - it's a decent day. » Hunter S. Thompson}
 \begin{document}
 
 \makecvtitle
 
-\section{Training}
-\tlcventry{2008}{2009}{J2EE \& .NET training}{}{}{CESI school}{Aix-en-Provence}{}
-\tlcventry{2005}{2007}{BTS Information Systems}{}{Application Developer Option}{Ecole Charlotte Grawitz}{Marseille}{}
-\tlcventry{2002}{2004}{DEUG de psychology}{}{}{Faculté de lettres}{Aix-en-Provence}{}
-\tlcventry{2001}{2002}{Baccalauréat STI}{}{Electronic Option}{Lycée Antonin Artaud}{Marseille}{}
+% Stuff we want to add:
+% * 
 
-\section{Skills}
-\subsection{Engineering}
-\cvlistitem{Software Development: TDD, KISS}
-\cvlistitem{Team/Project: Agile, Scrum}
-\cvlistitem{Modelisation: UML, MERISE, design pattern}
+\section{Summary}
+\begin{center}
+Dedicated and seasoned technology leader with a rich 16-year career,\\
+seamlessly blending an 8-year foundation in software development,\\
+with an additional 8 years of experience in DevOps.\\
+I have consistently demonstrated a passion for problem solving\\
+automation, streamline processes, and deliver robust solutions.
+\end{center}
 
-\subsection{Operating Systems}
-\cvlistitem{Server: Gentoo, Nixos, Centos, Debian}
+\section{Technical Skills}
+\subsection{Linux}
+\cvlistitem{Distros: Gentoo, Nixos, Arch, Debian, Centos}
+\cvlistitem{Packaging: Create custom version of a program for various distros}
+\cvlistitem{Network: iptables, tcpdump, netcat, nmap, socat}
+\cvlistitem{Load balancer: l4 (keepalived), l7 (HAProxy)}
+\cvlistitem{VPN: Wireguard, OpenVPN}
+\cvlistitem{Filesystem: btrfs, zfs, glusterfs, ceph}
+\cvlistitem{System image: Docker, Packer}
+\cvlistitem{Containers: Create and maintain docker stack (compose|cloud)}
 
-\subsection{Programming languages}
-\cvlistitem{Scripting: Bash, Python}
-\cvlistitem{Compiled: C, Go}
-\cvlistitem{Web: JavaScript, Node.js, PHP}
+\subsection{DevOps}
+\cvlistitem{Provisionning: Create and maintain Ansible playbooks and roles}
+\cvlistitem{Cloud: OpenStack, AWS}
+\cvlistitem{CI/CD: Git, gitlab-ci, github}
+\cvlistitem{Git: Pre/Post-hooks, submodules, subtree}
+\cvlistitem{Stabilisation of the deployment using several stage dev/testing/production}
+\cvlistitem{Monitoring: ELK, Grafana, Prometheus, Nagios, Munin}
+\cvlistitem{Monitoring application and system in a ELK stack Elasticsearch, Logstash, Kibana}
+\cvlistitem{Monitoring network devices with sflow-rt, telegraf, influxdb, grafana}
 
-\subsection{Development}
+\subsection{Scripting / Coding}
+\cvlistitem{Software Development: TDD, SOLID}
+\cvlistitem{Team/Project: Agile, Scrum, Kanban}
+\cvlistitem{Scripting: Bash, Python, Perl}
 \cvlistitem{Development of features with tests based on the specifications}
 \cvlistitem{Test/Linter script of the code validity and code convention}
 \cvlistitem{Load / stress test script}
 
-\subsection{Operation}
-\cvlistitem{Deploy of application from ci/cd}
-\cvlistitem{Create and maintain docker stack (compose|cloud)}
-\cvlistitem{Deploy application to docker swarm from ci/cd}
-\cvlistitem{Setup load balancer l4 (keepalived) or l7 (HAProxy)}
-\cvlistitem{Packaging software for (Gentoo / Debian / CentOs) and maintenance}
-\cvlistitem{Monitoring application and system in a stack Elasticsearch, Logstash, Kibana}
-\cvlistitem{Monitoring network devices with sflow-rt, telegraf, influxdb, graphana}
+\subsection{Documentation \& training}
+\cvlistitem{Pair-programming \& reviews}
+\cvlistitem{Write documentation in Sphinx/\LaTeX/Markdown}
+\cvlistitem{Train and mentor teams to master technical problems}
 
-\subsection{Security}
+\subsection{Run \& Security}
+\cvlistitem{Incident response}
 \cvlistitem{Security Auditing, backport fixes}
+\cvlistitem{Troubleshoot critical applications}
 
 \section{Experiences}
 
+\tlcventry{2020}{2023}{DevOps}{ACA-CEGID}{https://www.cegid.fr}
+{Paris}{
+  \begin{itemize}%
+    \item Monitoring (~1000 hosts) using M/Monit (scripts, services).
+    \item Setup \& troubleshoot network config and issues (ip, route, vpn, firewall).
+    \item Develop \& debug ansible roles (idempotent, tests, molecule).
+    \item Migrate legacy layout ext4+lvm to zfs (poc + migration).
+    \item Develop script to calculate real uncompressed used space (zfs, bash).
+    \item Manage and maintain a cluster of zfs backups servers (ansible, zfs, bash).
+    \item Harden linux config following ANSSI security guidelines (ansible, bash).
+    \item Incident management and on-call response.
+    \item Create and maintain documentation and process.
+    \item Centralization of logs in elk (filebeat).
+    \item Setup gitlab-ci and migrate ansible to use it.
+    \item Environment Tech :
+      \begin{itemize}%
+        \item OS : Debian 10-11 / RedHat 7-8
+        \item Cloud : VmWare
+        \item EDI : NeoVim
+        \item Technologies : Git, Ansible
+        \item Server: PostgreSQL 9-10-11, Apache, Groovy, Java
+      \end{itemize}
+  \end{itemize}}
+
+\vskip 2cm
+
 \tlcventry{2017}{2020}{DevOps}{Orange-HebEx}{http://www.orange.fr}
-{Bagnolet / Sofia-antipolis}{
+{Bagnolet / Sophia-antipolis}{
   \begin{itemize}%
     \item Work with SCRUM and jira.
-    \item Create prototype of vm with Vagrant / libvirt|virtualbox / Ansible.
+    \item Prototype vm (Vagrant, libvirt, virtualbox, Ansible).
     \item Create ansible role with  Molecule tests.
     \item Create ansible role freeradius.
     \item Create ansible role ldap (with proxy support).
@@ -92,14 +129,20 @@ Permis B%
     \item Dev ansible playbook to test openstack platform.
     \item Create base image for centos7, ubuntu14, ubuntu16 (packer / virtualbox|qemu).
     \item Create parsing script to convert scan snmp to ansible inventory (ini / python).
-    \item Environnement Tech :
+    \item Create smoke test script pour OpenStack.
+    \item Create base system base image centos7, ubuntu14, ubuntu16 (packer / virtualbox|qemu) for OpenStack.
+    \item Create parsing snmp to create ansible inventory (ini / python).
+    \item Environment Tech :
       \begin{itemize}%
         \item OS : Gentoo / Ubuntu LTS Server (12.04 / 14.04 / 16.04) / CentOS 7.
+        \item Cloud : OpenStack
         \item EDI : NeoVim.
         \item Technologies : Vagrant, LibVirt, Python, Git, Ansible, Molecule
-        \item Serveur: keepalived, haproxy, quagga
+        \item Server: keepalived, haproxy, quagga
       \end{itemize}
   \end{itemize}}
+
+\vskip 2cm
 
 \tlcventry{2016}{2017}{DevOps}{Display-Interactive}{http://www.ugo-ife.com/}
 {Montrouge / Xiamen}{
@@ -115,29 +158,35 @@ Permis B%
     \item Moving to remote site (Xiamen, China) and work (Admin + debug) on plane.
     \item Setup of Debian package depot for with GPG signature.
     \item Packaging of applications in deb format.
-    \item Technical Environnement :
+    \item Technical Environment :
       \begin{itemize}%
         \item OS : Gentoo / Ubuntu LTS Server (14.04 / 16.04), Raspbian.
+        \item Cloud : AWS
         \item EDI : NeoVim.
         \item Technologies : PHP, NodeJs, Python, Git, Bash, git.
       \end{itemize}
   \end{itemize}}
 
+\vskip 2cm
+
 \tlcventry{2015}{2016}{DevOps}{WedZem}{WedZem.com}
 {Paris}{
   \begin{itemize}%
     \item Refactoring of a WordPress's template (less, Bootstrap).
-    \item Setup of a container's web stack (docker-compose).
+    \item Create container's web stack (docker-compose).
     \item Admin of dev/test/prod vm in a physical server (Proxmox).
     \item Maintain projects and followup (Git, GitLab).
-    \item Technical Environnement :
+    \item Technical Environment :
       \begin{itemize}%
         \item OS : Gentoo / Debian 8.
+        \item Cloud : AWS
         \item Database : Mysql 5.5.
         \item EDI : Vim, Netbeans, Mysql Workbench.
         \item Technologies : PHP, JS, SQL, Py, Git, Bash, git.
       \end{itemize}
   \end{itemize}}
+
+\vskip 2cm
 
 \tlcventry{2013}{2015}{Developer}{Starpass}{BdMultimédia}
 {Paris}{
@@ -147,20 +196,23 @@ Permis B%
     \item Dev snapshot script to help monitoring the migration to the SCM.
     \item Dev script to create / manage Linux user with env, tests and doc.
     \item Dev script to deploy, local, and remote with several tests.
-    \item Dev script to test web-app, discover linkgs, check HTTP status and timings.
+    \item Dev script to test web-app, discover link, check HTTP status and timings.
     \item Dev script to audit PHP/JS code, find useless, encoding, path, include, indentation.
-    \item Training of Agile developement, and docs.
+    \item Training of Agile development, and docs.
     \item Setup cygwin, for non-unix machine.
     \item Create schema (merise) of a existing database.
-    \item Refactoring / versionning of DB (structure) and upgrade with scripts.
-    \item Environnement Tech :
+    \item Refactoring / versioning of DB (structure) and upgrade with scripts.
+    \item Environment Tech :
       \begin{itemize}%
         \item OS : Debian 6 / 7.
-        \item Bases de données : Mysql 5.5.
+        \item Database : Mysql 5.5.
         \item EDI : Vim, Netbeans, Mysql Workbench.
         \item Technologies : PHP, JS, SQL, Py, Git, Bash, git.
       \end{itemize}
   \end{itemize}}
+
+\vskip 1cm
+\vskip 5cm
 
 \tlcventry{2012}{2013}{Developer}{Renault Retail Group}{Purjus}
 {Paris}{
@@ -175,16 +227,18 @@ Permis B%
     \item Managing feature and bugfix branches in SVN.
     \item Dev feature following the Joomla framework.
     \item Creating mysql view.
-    \item Environnement Tech :
+    \item Environment Tech :
       \begin{itemize}%
         \item OS : Debian, freeBSD.
-        \item Bases de données : Mysql 5.5.
+        \item Database : Mysql 5.5.
         \item Framework : Joomla.
         \item EDI : Eclipse, Netbeans, vim, mysql workbench.
-        \item Librairies : sh404SEF, JCE.
+        \item Libraries : sh404SEF, JCE.
         \item Technologies : PHP, JS, SQL, Py, SVN.
       \end{itemize}
   \end{itemize}}
+
+\vskip 1cm
 
 \tlcventry{2010}{2012}{Developer}{Renault Paris}{Purjus}
 {Paris}{
@@ -194,16 +248,18 @@ Permis B%
     \item Dev information form in the front-end.
     \item Dev module to manage stock on the back-end.
     \item Create a SVN platform.
-    \item Environnement Tech :
+    \item Environment Tech :
       \begin{itemize}%
         \item OS : Debian, freeBSD.
-        \item Bases de données : Mysql 5.5.
+        \item Database : Mysql 5.5.
         \item Framework : Joomla.
         \item EDI : Eclipse, Netbeans, vim.
-        \item Librairies : sh404SEF, JCE.
+        \item Libraries : sh404SEF, JCE.
         \item Technologies : PHP, JS, SQL, Py, SVN.
       \end{itemize}
   \end{itemize}}
+
+\vskip 1cm
 
 \tlcventry {2008}{2010}{Developer}{KP1}{GFI}
 {Avignon}{
@@ -214,8 +270,8 @@ Permis B%
     \item Dev test suite for the project with jUnit.
     \item Environnement Tech :
       \begin{itemize}%
-        \item OS : Debian, Windows Xp, Windows 2003 Serveur, VMWare.
-        \item Bases de données : SQL Serveur 2005
+        \item OS : Debian, Windows Xp, Windows 2003 Server, VMWare.
+        \item Bases de données : SQL Server 2005
         \item Framework : JDK 1.5,  Struts 1.x.
         \item EDI : Vim, Eclipse 3.4.1 Ganymede, NetBeans 6.1
         \item Librairies : Tiles, Validator, Jep, Jcs, jUnit.
@@ -223,6 +279,7 @@ Permis B%
       \end{itemize}
   \end{itemize}}
 
+\vskip 1cm
 \tlcventry {2007}{2008}{Sysadmin}{Mairie de Marseille}{Computacenter}
 {Marseille}{
   \begin{itemize}%
@@ -230,15 +287,16 @@ Permis B%
     \item Managing tests and services check.
     \item Dev and manage load test.
     \item Backup server and database.
-    \item Environnement Tech :
+    \item Environment Tech :
       \begin{itemize}%
         \item OS : Debian, Win2003, RedHat Entreprise, Ubuntu.
-        \item Bases de données : Oracle 9.x, MySQL 4.x, Sql Serveur 2005.
+        \item Database : Oracle 9.x, MySQL 4.x, Sql Server 2005.
         \item EDI : Vim, NotePad++.
         \item Technologies : SSH, Bash linux et windows.
       \end{itemize}
   \end{itemize}}
 
+\vskip 1cm
 \tlcventry {2005}{2007}{Developer}{Liligo}{Findworks Technologies}
 {Paris}{
   \begin{itemize}%
@@ -248,24 +306,31 @@ Permis B%
     \item Dev XHTML/css following graphical chart.
     \item Study on SEO.
     \item Quality control and load test.
-    \item Environnement Tech :
+    \item Environment Tech :
       \begin{itemize}%
         \item OS : Debian, WinXP.
-        \item Bases de données : MySQL 4,x
+        \item Database : MySQL 4,x
         \item Framework : JDK 1,4.
         \item EDI : Eclipse 3,2 Web Tools Platform.
-        \item librairies : hibernate.
+        \item libraries : hibernate.
         \item Technologies : SSH, JAVA, JSP, Java Script, CSS, xHTML, PERL.
       \end{itemize}
   \end{itemize}}
 
+\vskip 1cm
+
+\section{Training}
+\tlcventry{2008}{2009}{J2EE \& .NET training}{}{}{CESI school}{Aix-en-Provence}{}
+\tlcventry{2005}{2007}{BTS Information Systems}{}{Application Developer Option}{Ecole Charlotte Grawitz}{Marseille}{}
+\tlcventry{2002}{2004}{DEUG de psychology}{}{}{Faculté de lettres}{Aix-en-Provence}{}
+\tlcventry{2001}{2002}{Baccalauréat STI}{}{Electronic Option}{Lycée Antonin Artaud}{Marseille}{}
 
 \section{Languages}
 \cvlanguage{Anglais}{Advanced}{Regular practice.}
 \cvlanguage{Spanish}{school}{Basic understanding.}
 
 \section{Hobbies}
-\cvhobby{Strategy games}{go, chess, MTG}
+\cvhobby{Strategy games}{go, mtg}
 \cvhobby{Open Source Enthusiast}{Several active project on Github}
 \cvhobby{Others}{Travel, Music, Reading}
 
