@@ -3,7 +3,7 @@
 
 % moderncv themes
 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
-\moderncvtheme[blue]{classic}
+\moderncvtheme[orange]{classic}
 
 % character encoding
 \usepackage[utf8]{inputenc}
@@ -56,7 +56,7 @@
 
 \AtBeginDocument{\renewcommand{\labelitemi}{-- }}
 
-\usepackage[firstyear=2002,lastyear=2020]{moderntimeline}
+\usepackage[firstyear=2002,lastyear=2024]{moderntimeline}
 %\tlmaxdates{1999}{2012}
 \tlwidth{0.8ex}
 
@@ -78,6 +78,13 @@
     }}%
 
 
+% makes a https hyperlink
+% usage: \httpslink[optional text]{link}
+\newcommand*{\httpslink}[2][]{% <=======================================
+  \ifthenelse{\equal{#1}{}}%
+    {\href{https://#2}{#2}}%
+    {\href{https://#2}{#1}}}
+
 % Refine quote
 \newcommand*{\myquote}[2]{%
    \quote{\itshape #1 \\ \scshape \footnotesize #2}}
@@ -96,3 +103,24 @@
 
 \newcommand*{\developer}{\footnotemark[1]}
 \newcommand*{\contributor}{\footnotemark[2]}
+
+% loading / skill progress
+% https://tex.stackexchange.com/questions/238898/in-line-graphics-in-text-to-represent-a-loading-bar-for-language-skills-in-a-cv
+% \usepackage{tikz}
+% \definecolor{frontColor}{rgb}{0.22,0.45,0.70}% light blue
+% \definecolor{backColor}{RGB}{200,200,200}% grey
+% \newcommand{\grade}[1]{%
+%     \begin{tikzpicture}
+%     \clip (1em-.4em,-.35em) rectangle (5em +.5em ,1em);
+%     \foreach \x in {1,2,...,5}{
+%         \path[{fill=backColor}] (\x em,0) circle (.35em);
+%     }
+%     \begin{scope}
+%     \clip (1em-.4em,-.35em) rectangle (#1em +.5em ,1em);
+%     \foreach \x in {1,2,...,5}{
+%         \path[{fill=frontColor}] (\x em,0) circle (.35em);
+%     }
+%     \end{scope}
+% 
+%     \end{tikzpicture}%
+% }
